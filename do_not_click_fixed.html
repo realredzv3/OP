@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DO NOT CLICK!</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+      text-shadow: 0 0 10px #ff0066, 0 0 20px #ff00ff;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 50px;
+      color: #aaaaaa;
+    }
+
+    .neon-button {
+      background-color: transparent;
+      color: #00ffff;
+      font-size: 1.8rem;
+      padding: 20px 50px;
+      border: 3px solid #00ffff;
+      border-radius: 15px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #00ffff, 0 0 30px #00ffff;
+    }
+
+    .neon-button:hover {
+      background-color: #00ffff;
+      color: #000;
+      box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    }
+
+    .emojis {
+      font-size: 3rem;
+      margin-top: 30px;
+      animation: shake 1.5s infinite;
+    }
+
+    @keyframes shake {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(3deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(-3deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .bg-glow {
+      position: absolute;
+      top: -200px;
+      left: -200px;
+      width: 1000px;
+      height: 1000px;
+      background: radial-gradient(circle, rgba(255,0,255,0.2) 0%, rgba(0,0,0,0) 70%);
+      z-index: -1;
+      animation: pulse 6s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.2); }
+    }
+  </style>
+  <script>
+    function go() {
+      const url = atob("aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQ==");
+      window.location.href = url;
+    }
+  </script>
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <h1>⚠️ DO NOT CLICK THIS BUTTON ⚠️</h1>
+  <p>This button is extremely dangerous. Proceed at your own risk 😱</p>
+  <button class="neon-button" onclick="go()">🚨 DO NOT CLICK 🚨</button>
+  <div class="emojis">💥💀🤯🚫🔥</div>
+</body>
+</html>
